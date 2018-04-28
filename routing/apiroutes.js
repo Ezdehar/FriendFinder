@@ -1,46 +1,20 @@
 var path = require("path");
 
-// var characters = [
-//     {
-//       routeName: "yoda",
-//       name: "Yoda",
-//       role: "Jedi Master",
-//       age: 900,
-//       forcePoints: 2000
-//     },
-//     {
-//       routeName: "darthmaul",
-//       name: "Darth Maul",
-//       role: "Sith Lord",
-//       age: 200,
-//       forcePoints: 1200
-//     },
-//     {
-//       routeName: "obiwankenobi",
-//       name: "Obi Wan Kenobi",
-//       role: "Jedi Master",
-//       age: 55,
-//       forcePoints: 1350
-//     }
-//   ];
   module.exports = function(app) {
 	// Search for Specific Character (or all characters) - provides JSON
     app.get("/api/friends", function(req, res) {
         return res.json(tables);
       });
-      app.post("/api/tables", function(req, res) {
+      app.post("/api/friends", function(req, res) {
         // req.body hosts is equal to the JSON post sent from the user
         // This works because of our body-parser middleware
-        var newReservation = req.body;
+        var newResults = req.body;
       
-        console.log(newReservation);
+        console.log(newResults);
       
-        if(tables.length < 5){
-          tables.push(newReservation);
-          res.json(newReservation);
-        } else {
-          waitlist.push(newReservation);
-          res.json(false);
+        if(results.length < 5){
+          results.push(newResults);
+          res.json(newResults);
         }
       });
       
