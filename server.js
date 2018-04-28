@@ -1,15 +1,18 @@
 // Dependencies
 // =============================================================
-const http = require("http");
 var express = require("express");
 var bodyParser = require("body-parser");
+const http = require("http");
 var path = require("path");
+// var htmlRoutes = require("./routing/htmlRoutes.js")
+// var apiRoutes = require("./routing/apiroutes.js")
+
 // Sets up the Express App
 // =============================================================
 var app = express();
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
-cont PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8080;
 //process.env to start up envirnment for app
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,8 +29,6 @@ app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
 
-//   var htmlRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/htmlRoutes.js");
-// var apiRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/apiroutes.js");
 
 
 
