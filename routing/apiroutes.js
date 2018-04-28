@@ -1,5 +1,5 @@
-var friendData - require ("../data/friends.js");
-
+var path = require("path");
+var friendData = require ("../data/friends.js");
 
   module.exports = function(app) {
 	// Search for Specific Character (or all characters) - provides JSON
@@ -17,9 +17,8 @@ var friendData - require ("../data/friends.js");
           results.push(newResults);
           res.json(newResults);
         }
-      });
-      
-};  
+      });      
+} 
         
 
 
