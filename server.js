@@ -3,8 +3,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var htmlRoutes = require("./htmlRoutes");
-var apiRoutes = require("./apiRoutes");
+var htmlRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/htmlRoutes.js");
+var apiRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/apiRoutes.js");
 // var htmlRoutes = require("./routing/htmlRoutes.js")
 // var apiRoutes = require("./routing/apiroutes.js")
 
