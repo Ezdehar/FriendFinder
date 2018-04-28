@@ -1,5 +1,3 @@
-// Dependencies
-// =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
 var http = require("http");
@@ -9,7 +7,6 @@ var apiRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing
 
 // Sets up the Express App
 // =============================================================
-
 var app = express();
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -24,14 +21,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 /// Routes
 // =============================================================
-htmlRoutes(app);
 apiRoutes(app);
+htmlRoutes(app);
   
-app.use(function (req, res) {
-  res.setHeader("Content-Type", "text/plain")
-  res.write("you posted:\n")
-  res.end(JSON.stringify(req.body, null, 2))
-});
+// app.use(function (req, res) {
+//   res.setHeader("Content-Type", "text/plain")
+//   res.write("you posted:\n")
+//   res.end(JSON.stringify(req.body, null, 2))
+// });
 
 
 // Starts the server to begin listening
