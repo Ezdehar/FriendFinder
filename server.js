@@ -2,8 +2,9 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-var htmlRoutes = require("./htmlRoutes")
-var apiRoutes = require("./apiRoutes")
+var path = require("path");
+var htmlRoutes = require("/routing/htmlRoutes")
+var apiRoutes = require("/routing/apiRoutes")
 //path is a core module so no need to npm 
 
 // Sets up the Express App
@@ -20,19 +21,7 @@ app.use(bodyParser.json());
 htmlRoutes(app);
 apiRoutes(app);
 
-// Basic route that sends the user first to the AJAX Page
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
-  });
 
-app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
-  });
-  
-  app.get("/api/friends", function(req, res) {
-    res.sendFile(path.join(__dirname, "add.html"));
-    return res.json(characters);
-  });
   
 //   // Displays a single character, or returns false
 //   app.get("/api/characters/:character", function(req, res) {
