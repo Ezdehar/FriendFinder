@@ -2,9 +2,9 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-const http = require("http");
-var htmlRoutes = require("./htmlRoutes")
-var apiRoutes = require("./apiRoutes")
+var path = require("path");
+var htmlRoutes = require("./htmlRoutes");
+var apiRoutes = require("./apiRoutes");
 // var htmlRoutes = require("./routing/htmlRoutes.js")
 // var apiRoutes = require("./routing/apiroutes.js")
 
