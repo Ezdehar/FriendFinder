@@ -1,9 +1,10 @@
-var path = require("path");
+var friendData - require ("../data/friends.js");
+
 
   module.exports = function(app) {
 	// Search for Specific Character (or all characters) - provides JSON
     app.get("/api/friends", function(req, res) {
-        return res.json(tables);
+        return res.json(friendData);
       });
       app.post("/api/friends", function(req, res) {
         // req.body hosts is equal to the JSON post sent from the user
