@@ -11,11 +11,11 @@ var express = require("express");
         // This works because of our body-parser middleware
         var friends = req.body;
       
-        console.log(results);
+        console.log(friends);
       
-        if(results.length < 5){
-          results.push(newResults);
-          res.json(newResults);
+        if(friends.length < 5){
+          results.push(newFriends);
+          res.json(newFriends);
         }
       });      
 }; 
