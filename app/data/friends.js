@@ -1,4 +1,8 @@
-var tableArray = [
+var path = require("path");
+var express = require("express");
+
+module.exports = function(app) {
+var tableArray = 
     {  
         "name": "Ahmed",
         "photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
@@ -13,8 +17,11 @@ var tableArray = [
                     "5",
                     "4",
                     "1"
-        ]
+                  ]
     }
-];
+  };
 
-module.exports = tableArray;
+
+
+
+//var connection = require("../config/friend.js");
