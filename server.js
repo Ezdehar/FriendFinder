@@ -13,13 +13,12 @@ var PORT = process.env.PORT || 8080;
 
 //process.env to start up envirnment for app
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 /// Routes
 // =============================================================
-
-require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/htmlRoutes.js")(app);
-require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/apiRoutes.js")(app);
+var apiRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/htmlRoutes.js")(app);
+var htmlRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/apiRoutes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
