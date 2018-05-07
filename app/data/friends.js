@@ -2,7 +2,7 @@ var express = require("express");
 var path = require("path");
  
 module.exports = function(app) {
-var userData = [
+var friends = [
       {
       "name":"Ahmed",
       "photo":"https://media.licdn.com/dms/image/C5603AQG6VYstsbh80w/profile-displayphoto-shrink_200_200/0?e=1530748800&v=beta&t=2OmT_L2JdzSqNmEH8mzd1AZc6IuRJijkbjap38SA13E",
@@ -36,6 +36,6 @@ var userData = [
         ]
       }
     ];
-    return userData;
+    return friends;
   };
 

@@ -190,9 +190,8 @@
     </div>
   </div>
 
-  <script type="text/javascript">
+   <script type="text/javascript">
     // Chosen CSS
-    $(function() {
     var config = {
       ".chosen-select": {},
       ".chosen-select-deselect": {
@@ -208,7 +207,7 @@
         width: "95%"
       }
     };
-  });
+
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
@@ -234,6 +233,7 @@
         });
         return isValid;
       }
+
       // If all required fields are filled
       if (validateForm()) {
         // Create an object for the user"s data
@@ -271,9 +271,6 @@
     });
   </script>
 
-
 </body>
 
 </html>
-
-
