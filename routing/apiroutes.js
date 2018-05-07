@@ -1,19 +1,19 @@
 var express = require("express");
 var path = require("path");
-var userData = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/app/data/friends.js");
+var userData = require("/../../data/friends.js");
 
 module.exports = function(app) {
 // Search for Specific Character (or all characters) - provides JSON
-  app.get("/api/friends", function(data, req, res) {
-    return res.json(userData);
-    console.log(userData);
+  app.get("/api/friends", function(req, res) {
+    res.json(friends);
+    //console.log(friends);
   });
   
-  app.post("/api/friends", function(data, req, res) {
+  app.post("/api/friends", function(req, res) {
      // req.body hosts is equal to the JSON post sent from the users
       if (userData.length < 5) {
       userData.push(req.body);
-      return JSON.stringify(userData);
+      JSON.stringify(userData);
       // var user1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1];
       // var user2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1];
       

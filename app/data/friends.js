@@ -1,5 +1,7 @@
+var express = require("express");
 var path = require("path");
-
+ 
+module.exports = function(app) {
 var userData = [
       {
       "name":"Ahmed",
@@ -34,5 +36,6 @@ var userData = [
         ]
       }
     ];
-module.exports = userData;
+    return userData;
+  };
 

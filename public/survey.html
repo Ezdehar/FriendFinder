@@ -192,6 +192,7 @@
 
   <script type="text/javascript">
     // Chosen CSS
+    $(function() {
     var config = {
       ".chosen-select": {},
       ".chosen-select-deselect": {
@@ -207,7 +208,7 @@
         width: "95%"
       }
     };
-
+  });
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
