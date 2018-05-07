@@ -3,7 +3,6 @@ var bodyParser = require("body-parser");
 var https = require("https");
 var http = require("http");
 var path = require("path");
-
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -17,8 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 /// Routes
 // =============================================================
-var apiRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/htmlRoutes.js")(app);
-var htmlRoutes = require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/apiRoutes.js")(app);
+require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/htmlRoutes.js")(app);
+require("/Users/ezdeharjaber/Documents/cwru/FriendFinder/routing/apiRoutes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
